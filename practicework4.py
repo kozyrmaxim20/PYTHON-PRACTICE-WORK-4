@@ -174,3 +174,135 @@ else:
         numv61 += 1000
     print(f"Первое число: {numv6}, второе число: {numv61}")
 #В7. Задание 1
+string = input("Введите строку: ")
+
+if len(string) > 0:
+    last_char = string[-1]
+    print(last_char in ["я", "и", "е", "ю"])
+else:
+    print("строка пустая")
+#В7. Задание 2
+a2 = int(input("Введите первую сторону треугольника: "))
+b2 = int(input("Введите вторую сторону треугольника: "))
+c2 = int(input("Введите трктью сторону треугольника: "))
+
+if a2 > 0 and b2 > 0 and c2 > 0 and (a2 + b2 > c2) and (a2 + c2 > b2) and (b2 + c2 > a2):
+    print(True)
+else:
+    print(False)
+#В7. Задание 3
+nuum = int(input("Введите число: "))
+last_digit = abs(nuum) % 10
+
+if last_digit == 0:
+    result = nuum ** 10
+    print(f"Последняя цифра 0. Число в степени 10: {result}")
+elif last_digit == 1:
+    remainder = nuum % 3
+    print(f"Последняя цифра 1. Остаток от деления на 3: {remainder}")
+elif last_digit == 2:
+    result = nuum // 2
+    print(f"Последняя цифра 2. Целочисленное деление на 2: {result}")
+else:
+    result = nuum ** 2
+    print(f"Последняя цифра {last_digit}. Число в квадрате: {result}")
+#В8. Задание 1
+password = input("Введите пароль: ")
+
+if len(password) < 8 or "23" in password:
+    print(False)
+else:
+    print(True)
+#В8. Задание 2
+pc_number = 777
+
+nuum1 = int(input("Введите первое число: "))
+nuum2 = int(input("Введите второе число: "))
+
+if (nuum1 < pc_number < nuum2) or (nuum2 < pc_number < nuum1):
+    print(True)
+else:
+    print(False)
+
+#В8. Задание 3
+lamp_1 = 0
+lamp_2 = 0
+
+choice = input("Какую лампочку зажечь? (введите 1 или 2): ").strip()
+
+if choice == "1":
+    lamp_1 = 1
+    print(f"Лампочка 1 зажжена. lamp_1 = {lamp_1}, lamp_2 = {lamp_2}")
+elif choice == "2":
+    lamp_2 = 1
+    print(f"Лампочка 2 зажжена. lamp_1 = {lamp_1}, lamp_2 = {lamp_2}")
+else:
+    print("Обе лампочки не горят")
+#В9. Задание 1
+switch_1 = False
+switch_2 = False
+
+answer = input("Включить? ")
+
+if answer == "да":
+    switch_1 = True
+    switch_2 = True
+    print("Всё включено")
+    print(f"switch_1 = {switch_1}, switch_2 = {switch_2}")
+else:
+    print(f"switch_1 = {switch_1}, switch_2 = {switch_2}")
+
+#В9. Задание 2
+numm = int(input("Введите число: "))
+
+if numm > 0:
+    if numm % 2 == 0:
+        print(True, "even")
+    else:
+        print(True, "odd")
+else:
+    print(False)
+
+#В9. Задание 3
+string = input("Введите строку: ")
+
+if string.startswith("/"):
+    print("command")
+else:
+    print("It’s string")
+#В10. Задание 1
+string = input("Введите строку: ")
+
+if len(string) == 0:
+    print(None)
+elif len(string) <= 5:
+    print("short")
+elif 6 <= len(string) <= 10:
+    print("normal")
+else:
+    print("long")
+
+#В10. Задание 2
+numv10 = int(input("Введите целое число: "))
+
+if numv10 < 0:
+    numv10 = 1_000_000
+    print(numv10)
+elif numv10 == 0:
+    numv10 = 2
+    result = numv10 ** 2
+    print(result)
+else:
+    result = numv10 ** 3
+    print(result)
+
+#В10. Задание 3
+number_1 = 10
+number_2 = 100
+
+user_num = int(input("Введите ваше число: "))
+
+if number_1 <= user_num <= number_2:
+    print(True)
+else:
+    print(False)
